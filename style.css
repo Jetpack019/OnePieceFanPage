@@ -1,0 +1,407 @@
+* {
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 20vh;
+    background-position: center;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+.container{
+    margin-top: 10px;
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.logo{
+    
+    width: 240px;
+ 
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: rgb(58, 99, 175);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #02224d;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+   background: #02224d;
+}
+
+/* --------- about ---------- */
+#about{
+    margin-top: 10px;
+    padding: 80px 0;
+    color: #fff;
+    background-image:linear-gradient(rgba(2, 2, 2, 0.8),rgba(0,0,0,0.8)), url('image/strawhats.jpg');
+    background-size: cover;
+    font-weight: bold;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(27, 177, 214);
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #02224d;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s ;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: rgb(29, 141, 175);
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+/* ---------specials--------- */
+#specials{
+    padding: 30px 0;
+}
+
+.specials-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.specials-list div{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+
+.specials-list div img{
+    font-size: 10px;
+    margin-bottom: 30px;
+    background-size: cover;
+}
+.specials-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    
+}
+
+#specials .sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(25, 37, 59);
+}
+.specials-list div a{
+    text-decoration: none;
+    color: #02224d;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+.specials-list .back-1 p{
+    font-size: 20px;
+}
+
+.specials-list .back-2 img{
+    height: 270px;
+    width: 270px;
+}
+
+.specials-list .back-3 img{
+    height: 270px;
+    width: 270px;
+}
+
+
+.specials-list .back-1:hover{
+    background-image:linear-gradient(rgba(2, 2, 2, 0.8),rgba(0,0,0,0.8)), url('image/luffy-1033.jpg');
+    transform: translateY(-10px);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.specials-list .back-2:hover{
+    background-image:linear-gradient(rgba(2, 2, 2, 0.8),rgba(0,0,0,0.8)), url('image/chap1060-cover.jpg');
+    transform: translateY(-10px);
+    background-size: cover;
+    background-position: center;
+}
+
+.specials-list .back-3:hover{
+    background-image:linear-gradient(rgba(2, 2, 2, 0.8),rgba(0,0,0,0.8)), url('image/red-film.jpg');
+    transform: translateY(-10px);
+    background-size: cover;
+    background-position: center;
+}
+
+/*-----footer------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color: #02224d;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.icons .fa{
+    color: #02224d;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart-o{
+    color: #02224d;
+}
+
+
+@media only screen and (max-width: 600px){
+
+
+#header{
+    width: 100%;
+    height: 15vh;
+    background-position: center;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    }
+
+    .container{
+        margin-top: 10px;
+        padding: 10px 10%;
+    }
+    
+    .logo{
+        width: 100px;
+    }
+    
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+    
+    nav ul li a{
+        color: rgb(58, 99, 175);
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        position: relative;
+    }
+
+
+        
+    /* --------- about ---------- */
+    #about{
+        margin-top: 10px;
+        padding: 80px 0;
+        color: #fff;
+        background-image:linear-gradient(rgba(2, 2, 2, 0.8),rgba(0,0,0,0.8)), url('image/strawhats.jpg');
+        background-size: cover;
+        font-weight: bold;
+    }
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .about-col-1{
+        flex-basis: 35%;
+    }
+    .about-col-1 img{
+        width: 80%;
+        border-radius: 15px;
+    }
+
+    .about-col-2{
+        flex-basis: 60%;
+    }
+    .about-col-2 p{
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .sub-title{
+        font-size: 30px;
+        font-weight: 600;
+        color: rgb(27, 177, 214);
+    }
+
+    .tab-titles{
+        display: flex;
+        margin: 20px 0 40px;
+    }
+
+    .tab-links{
+        margin-right: 12px;
+        font-size: 15px;
+        font-weight:600;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .tab-links::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #02224d;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s ;
+    }
+
+    .tab-links.active-link::after{
+        width: 50%;
+    }
+
+    .tab-contents ul li{
+        list-style: none;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+
+    .tab-contents ul li span{
+        color: rgb(29, 141, 175);
+        font-size: 12px;
+    }
+
+    .tab-contents{
+        display: none;
+    }
+
+    .tab-contents.active-tab{
+        display: block;
+    }
+
+        
+
+}
